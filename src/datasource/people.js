@@ -17,17 +17,17 @@ class starWarsAPI extends RESTDataSource {
       : [];
   }
 
-  async personReducer(person) {
-    const homeEndpoint = person.homeworld.slice(-2, -1);
-    const homeNum = parseInt(homeEndpoint);
-    const home = await this.get(`planets/${homeNum}`);
+  personReducer(person) {
+    // const homeEndpoint = person.homeworld.slice(-2, -1);
+    // const homeNum = parseInt(homeEndpoint);
+    // const home = await this.get(`planets/${homeNum}`);
 
     return {
       name: person.name,
       height: person.height,
       mass: person.mass,
       gender: person.gender,
-      homeworld: home.name,
+      // homeworld: home.name,
     };
   }
 
