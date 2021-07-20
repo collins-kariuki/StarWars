@@ -23,10 +23,11 @@ function Person() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  const names = data.person[0].name;
-  const height = data.person[0].height;
-  const mass = data.person[0].mass;
-  const gender = data.person[0].gender;
+  const person = data.person[0];
+  const names = person.name;
+  const height = person.height;
+  const mass = person.mass;
+  const gender = person.gender;
   return (
     <div
       key={names}
