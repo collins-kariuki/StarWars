@@ -10,13 +10,6 @@ const server = new ApolloServer({
   dataSources: () => ({
     starWarsAPI: new starWarsAPI(),
   }),
-  formatError: (err) => {
-    // Don't give the specific errors to the client.
-    if (err.message.startsWith("404: NOT FOUND")) {
-      return "";
-    }
-    return err;
-  },
 });
 
 server.listen().then(() => {
